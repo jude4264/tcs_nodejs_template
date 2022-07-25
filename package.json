@@ -1,0 +1,20 @@
+{
+  "name": "template_react_nodejs",
+  "version": "1.0.0",
+  "repository" : "https://github.com/topcoresystem/tcs_nodejs_template.git",
+  "author": {
+    "email": "gywns1720@gmail.com",
+    "url": "http://www.topcore.co.kr/",
+    "name": "HJ"
+  },
+  "private": "true",
+  "license": "Unlicnese",
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "server_dev_on" : "yarn workspace backend dev",
+    "client_dev_on" : "yarn workspace frontend start"
+  }
+}
