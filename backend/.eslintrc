@@ -1,0 +1,44 @@
+{
+    "parser": "babel-parser",
+    // 코드 포멧을 prettier 로 설정
+    "plugins": [
+        "prettier"
+    ],
+
+    // eslint 룰을 기본 권장으로 설정
+    "extends": [
+        "eslint:recommended",
+        "plugin:prettier/recommended"
+    ],
+
+    // 코드를 해석하는 parser에 대한 설정
+    "parserOptions": {
+        // 자바스크립트 버전 ECMA 2016
+        "ecmaVersion": 7,
+        // import, export 사용 가능 여부 설정
+        "sourceType": "module",
+        // jsx 허용 설정 (react 사용안할것이므로 false)
+        "ecmaFeatures": {
+            "jsx": false
+        }
+    },
+
+    // linter가 파일을 분석할 때, 미리 정의된 전역변수에 무엇이 있는지 명시하는 속성
+    "env" : {
+        // 브라우저 document와 같은 객체 사용 여부
+        "browser": false,
+        // node.js에서 console 과 같은 전역변수 사용 여부
+        "node": true
+    },
+
+    // ESlint가 무시할 디렉토리, 파일 설정
+    "ignorePatterns": [
+        "node_modules/*"
+    ],
+
+    // Eslint 룰 설정
+    "rules": {
+        // prettier 에 맞게 룰을 설정
+        "prettier/prettier" : "error"
+    }
+}

@@ -1,0 +1,36 @@
+
+.container
+{
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.table
+{
+    width: 80vw;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.table > thead
+{
+    font-size: 3.2rem;
+    font-weight: bold;
+    height: 90px;
+}
+
+.table > tbody
+{
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+
+}
+.table > tbody > tr
+{
+    border-collapse: collapse;
+    border: 2px solid #222;
+
+}

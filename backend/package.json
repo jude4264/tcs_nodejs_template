@@ -1,7 +1,10 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "nodemon"
+  },
   "devDependencies": {
     "@babel/cli": "^7.18.9",
     "@babel/core": "^7.18.9",
@@ -22,6 +25,7 @@
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "colors": "^1.4.0",
     "connect-timeout": "^1.9.0",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",

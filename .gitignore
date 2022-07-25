@@ -25,3 +25,6 @@ yarn-debug.log*
 frontend/yarn-debug.log*
 yarn-error.log*
 /frontend/node_modules/
+
+backend/config
+log/server_log/*
