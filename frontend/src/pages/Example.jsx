@@ -7,6 +7,7 @@ import {fecther} from "../utils/fecther";
 
 // css module file 불러오기 .module 붙여야한다.
 import style from './Example.module.css'
+import {TestContainer} from "../components/cssComponents";
 
 
 const ExampleHome = () => {
@@ -18,7 +19,11 @@ const ExampleHome = () => {
 
     // 서버에서 데이터 요청
     async function loadUser(){
-        const result = await fecther('get', '/api/dbload/select')
+        const result = await fecther('get', '/api/dbload/select', {
+            headers : {
+                "User-Agent" : "test"
+            }
+        })
         console.log(result.message)
         if(result.message.length <= 0)
         {
@@ -37,9 +42,14 @@ const ExampleHome = () => {
         loadUser().catch(err => {
             console.error(err)
         })
+
+        return () => {
+            console.log('cleanup')
+        }
+
     }, [])
 
-    return <>
+   return <>
         {/* 여기선 class 가 아닌 className 써야한다. */}
         <div className={style.container}>
             <table className={style.table}>
@@ -71,6 +81,10 @@ const ExampleHome = () => {
                 }
                 </tbody>
             </table>
+            {/* cssComponents.js 파일의 컴포넌트 */}
+            <TestContainer>
+                <p>css Test</p>
+            </TestContainer>
         </div>
 
     </>

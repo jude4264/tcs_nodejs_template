@@ -73,12 +73,15 @@ const WebServer = (function(){
             {
                 // Https 적용 (SSL 인증키 필요)
                 const options = {
-                    key : fs.readFileSync(path.join(rootDir, 'https_key', 'server.key')),
+                    key : fs.readFileSync(path.join(rootDir, 'https_key', 'server.no.key')),
                     cert : fs.readFileSync(path.join(rootDir, 'https_key', 'server.crt')),
-                    passphrase : '1234'     // SSL 비밀번호
+                    passphrase : '1234',     // SSL 비밀번호
+                    // 허가되지 않은 보안 인증을 reject 할 건지 에 대한 옵션
+                    agent : false
                 };
                 isHttps = true
                 httpServer = https.createServer(options, expressServer)
+
             }
             else
             {
