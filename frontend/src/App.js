@@ -5,7 +5,7 @@ function App() {
     return (
         <>
             <Routes>
-                <Route path={'/'} element={<ExampleHome/>}/>
+                <Route path={'/test'} element={<ExampleHome/>}/>
                 {/*<Route path={'/home'} element={<Home/>}/>*/}
                 {/*<Route path={'/display'} element={<Display/>}/>*/}
                 {/*<Route path={'/setting'} element={<Setting/>}/>*/}

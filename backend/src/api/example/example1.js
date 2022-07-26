@@ -12,6 +12,9 @@ example1
     .setComment('이 것은 예시 입니다.')       // 라우터에 대한 주석
     .setMethod('get')                       // 라우터 HTTP 방식을 GET으로 설정
     // 예시 (http://localhost:8000/api/example1/:id/:name)
+    // http://localhost:8000/api/example1/test/hyojun?title=hello&a=come
+    // req.params => {id : test, name : hyojun}
+    // req.query => {title : 'hello', a : 'come'}
     .setUrl('/api/example1/:id/:name')        // URL 설정  : 이것이 붙어있는 것은 어떤 값이 들어오면 id = 값 형태로 변수에 들어온다.
     // 이벤트는 위에서 아래로 순서이며
     // next() 실행시키면 다음 이벤트로 넘어간다.
